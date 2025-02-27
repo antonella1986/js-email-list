@@ -4,12 +4,15 @@ const emailEl = document.querySelector(".randomEmail")
 
 let email = []
 
+function getEmails() {
+    for (let i = 0; i < emailEl.length; i++) {
+        const element = emailEl[i];
+    }
+}
+
 fetch("https://flynn.boolean.careers/exercises/api/random/mail")
     .then(response => response.json())
     .then(data => {
-        for (let i = 0; i < emailEl.length; i++) {
-            const element = emailEl[i];
-        }
         console.log(data);
     })
     .catch (error => {
